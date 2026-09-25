@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drift rental cars for moving through the city on your own terms.">
+  <title>DRIFT / car rental for the curious</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#userPortal" aria-label="Drift home"><span class="brand-mark">D</span><span>DRIFT<span class="brand-dot">.</span></span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#fleet">The fleet</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#stories">Stories</a>
+      </nav>
+      <div class="header-actions">
+        <div class="portal-switch" role="tablist" aria-label="Choose portal"><button class="portal-button active" data-portal="userPortal" role="tab" aria-selected="true">User portal</button><button class="portal-button" data-portal="adminPortal" role="tab" aria-selected="false">Admin portal</button></div>
+        <button class="text-button" id="loginButton">Log in</button>
+        <a class="outline-button" href="#fleet">View cars <span>↗</span></a>
+        <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main id="userPortal">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">RENTAL, REIMAGINED <span class="eyebrow-line"></span> 01 / 04</p>
+          <h1 class="reveal delay-one">Go where<br><em>you</em> feel<br>like going<span class="lime-dot">.</span></h1>
+          <p class="hero-intro reveal delay-two">Beautiful cars, easy pickup, and the freedom to take the long way home.</p>
+          <a class="arrow-link reveal delay-three" href="#booking">Find your way <span class="circle-arrow">↘</span></a>
+        </div>
+        <div class="hero-visual reveal delay-two">
+          <div class="sun-disc"></div>
+          <div class="route-stamp">TAKE THE<br>SCENIC ROUTE<br><span>DRIFT / 2024</span></div>
+          <div class="car-scene">
+            <div class="road-shadow"></div>
+            <div class="hero-viewer"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BMW_M4%2C_EMS_23%2C_Essen_%28P1170092%29.jpg" alt="BMW M4 at the Essen Motor Show"><span>DRIFT / BMW M4</span><small>Photo: MB-one / CC BY-SA 4.0</small></div>
+          </div>
+          <div class="visual-caption"><span>01</span><span>ATL — NOW</span><span class="caption-rule"></span></div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Drift service highlights">
+        <div class="ticker-track"><span>NO HIDDEN FEES</span><b>✦</b><span>FREE CANCELLATION</span><b>✦</b><span>DELIVERED TO YOUR DOOR</span><b>✦</b><span>NO HIDDEN FEES</span><b>✦</b><span>FREE CANCELLATION</span><b>✦</b></div>
+      </div>
+
+      <section class="booking-section" id="booking">
+        <div class="section-kicker"><span>02</span><span>MAKE IT YOURS</span></div>
+        <div class="booking-heading"><h2>Where to next?</h2><p>Pick a place. We’ll handle the rest.</p></div>
+        <div class="booking-card read-only-notice"><div><span class="field-label">Browse mode</span><strong>View cars and rental details</strong></div><div><span class="field-label">Need to reserve?</span><strong>Contact the rental admin</strong></div></div>
+        <p class="booking-note" id="bookingNote">User Portal is read-only. Reservations are managed by the Admin Portal.</p>
+      </section>
+
+      <section class="fleet-section" id="fleet">
+        <div class="fleet-topline"><div class="section-kicker"><span>03</span><span>THE FLEET</span></div><a class="arrow-link small" href="#fleet-grid">View all cars <span class="circle-arrow">↘</span></a></div>
+        <div class="fleet-heading"><h2>A good car changes<br><em>the whole day.</em></h2><div class="fleet-tabs" role="tablist" aria-label="Filter cars"><button class="active" data-filter="all">All cars</button><button data-filter="city">City</button><button data-filter="weekend">Weekend</button></div></div>
+        <div class="fleet-grid" id="fleet-grid">
+          <article class="car-card featured" data-type="weekend" data-car-id="porsche"><div class="card-image user-car-placeholder"><span class="car-tag">MOST LOVED</span><span class="user-image-label">Porsche 911</span><span class="heart-view">♡</span></div><div class="card-info"><div><h3 class="user-car-name">Porsche 911</h3><p class="user-car-details">Weekend / <span class="user-car-seats">2</span> seats</p><span class="km-detail">250 km included / day</span></div><strong>₹4,500 <small>/ day</small></strong></div></article>
+          <article class="car-card" data-type="city" data-car-id="polestar"><div class="card-image user-car-placeholder"><span class="car-tag quiet">CITY FAVORITE</span><span class="user-image-label">Polestar 2</span><span class="heart-view">♡</span></div><div class="card-info"><div><h3 class="user-car-name">Polestar 2</h3><p class="user-car-details">City / <span class="user-car-seats">5</span> seats</p><span class="km-detail">200 km included / day</span></div><strong>₹2,500 <small>/ day</small></strong></div></article>
+          <article class="car-card" data-type="city" data-car-id="mini"><div class="card-image user-car-placeholder"><span class="car-tag quiet">NEW ARRIVAL</span><span class="user-image-label">Mini Cooper</span><span class="heart-view">♡</span></div><div class="card-info"><div><h3 class="user-car-name">Mini Cooper</h3><p class="user-car-details">City / <span class="user-car-seats">4</span> seats</p><span class="km-detail">150 km included / day</span></div><strong>₹1,800 <small>/ day</small></strong></div></article>
+        </div>
+      </section>
+
+      <section class="manifesto-section" id="how-it-works">
+        <div class="manifesto-number">04</div><div class="manifesto-copy"><p class="eyebrow">THE DRIFT PROMISE</p><h2>More than a way<br>to get <em>there.</em></h2><p>We think renting a car should feel less like paperwork and more like the beginning of something. That’s why every Drift comes clean, full, and ready for whatever.</p><a class="arrow-link" href="#booking">Start your next story <span class="circle-arrow">↘</span></a></div><div class="manifesto-stamp">EST.<br>2018</div>
+      </section>
+    </main>
+
+    <main class="admin-portal" id="adminPortal" hidden>
+      <section class="admin-hero">
+        <div><p class="eyebrow">ADMIN WORKSPACE <span class="eyebrow-line"></span> 01 / 02</p><h1>Keep every<br><em>ride</em> ready<span class="lime-dot">.</span></h1><p class="hero-intro">Manage cars, pricing, availability, and reservations from one place.</p></div>
+        <div class="admin-status"><span class="status-dot"></span><span>System online</span><strong>12</strong><small>active cars</small></div>
+      </section>
+      <section class="admin-content">
+        <div class="admin-toolbar"><div class="section-kicker"><span>02</span><span>FLEET CONTROL</span></div><button class="primary-button" id="saveFleetButton">Save changes <span>↗</span></button></div>
+        <div class="admin-panel"><div class="panel-heading"><div><h2>Manage your cars</h2><p>Upload photos and set the daily rental terms.</p></div><button class="outline-button" id="addCarButton">+ Add car</button></div><div class="admin-car-list">
+          <div class="admin-car-row" data-car-id="porsche"><div class="admin-thumb image-upload"><label for="adminImage1"><span class="upload-plus">+</span><span>Car photo</span></label><input id="adminImage1" type="file" accept="image/*"></div><div class="admin-car-name"><label>Car name<div class="admin-input"><input class="admin-name-input" type="text" value="Porsche 911"></div></label><label>Details<div class="admin-input"><input class="admin-details-input" type="text" value="Weekend"></div></label></div><label>Seats<div class="admin-input"><input class="admin-seats-input" type="number" value="2" min="1"></div></label><label>Price / day<div class="admin-input"><span>₹</span><input type="number" value="4500" min="0"></div></label><label>Included km<div class="admin-input"><input type="number" value="250" min="0"><span>km</span></div></label><button class="row-menu delete-car-button" type="button" aria-label="Delete Porsche">Delete</button></div>
+          <div class="admin-car-row" data-car-id="polestar"><div class="admin-thumb image-upload"><label for="adminImage2"><span class="upload-plus">+</span><span>Car photo</span></label><input id="adminImage2" type="file" accept="image/*"></div><div class="admin-car-name"><label>Car name<div class="admin-input"><input class="admin-name-input" type="text" value="Polestar 2"></div></label><label>Details<div class="admin-input"><input class="admin-details-input" type="text" value="City"></div></label></div><label>Seats<div class="admin-input"><input class="admin-seats-input" type="number" value="5" min="1"></div></label><label>Price / day<div class="admin-input"><span>₹</span><input type="number" value="2500" min="0"></div></label><label>Included km<div class="admin-input"><input type="number" value="200" min="0"><span>km</span></div></label><button class="row-menu delete-car-button" type="button" aria-label="Delete Polestar">Delete</button></div>
+          <div class="admin-car-row" data-car-id="mini"><div class="admin-thumb image-upload"><label for="adminImage3"><span class="upload-plus">+</span><span>Car photo</span></label><input id="adminImage3" type="file" accept="image/*"></div><div class="admin-car-name"><label>Car name<div class="admin-input"><input class="admin-name-input" type="text" value="Mini Cooper"></div></label><label>Details<div class="admin-input"><input class="admin-details-input" type="text" value="City"></div></label></div><label>Seats<div class="admin-input"><input class="admin-seats-input" type="number" value="4" min="1"></div></label><label>Price / day<div class="admin-input"><span>₹</span><input type="number" value="1800" min="0"></div></label><label>Included km<div class="admin-input"><input type="number" value="150" min="0"><span>km</span></div></label><button class="row-menu delete-car-button" type="button" aria-label="Delete Mini">Delete</button></div>
+        </div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="stories"><div class="footer-brand"><span class="brand-mark">D</span><span>DRIFT<span class="brand-dot">.</span></span></div><p>For the roads less planned.</p><div class="footer-links"><a href="#fleet">Instagram ↗</a><a href="#booking">Support ↗</a><a href="#userPortal">Back to top ↑</a></div></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
